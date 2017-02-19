@@ -1,3 +1,6 @@
+import { LoadUserNamesAction } from '../../store/action/user-names-loaded-action';
+import { IStoreApp } from '../../store/models/istore';
+import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BcompComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store : Store<IStoreApp>) { 
+
+    
+  }
 
   ngOnInit() {
+    this.store.dispatch(new LoadUserNamesAction);
   }
 
 }
