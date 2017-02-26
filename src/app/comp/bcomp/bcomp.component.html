@@ -1,3 +1,5 @@
-<p>
-  bcomp works!
-</p>
+<div> 
+  <p *ngFor="let v of names$ | async">
+    <span>names: {{v.name}}</span>
+  </p>
+</div>

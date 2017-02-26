@@ -3,6 +3,8 @@ import { Action } from '@ngrx/store';
 
 export class LoadUserNamesAction implements Action {
     readonly type:string = LOAD_USER_NAMES_ACTION;
+    constructor(public payload?:number) {         
+    }
 }
 export const LOAD_USER_NAMES_ACTION = 'LOAD_USER_NAMES_ACTION';
 

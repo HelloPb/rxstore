@@ -10,7 +10,7 @@ export class NameService {
 
   constructor(private http: Http) {}
 
-  getNames():Observable<INames> {
+  getNames(n : number):Observable<INames> {
     return this.http.get('/assets/json/names.json').map(q=> q.json());
   }
 }

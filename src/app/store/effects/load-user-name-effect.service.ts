@@ -11,7 +11,6 @@ export class LoadUserNameEffectService {
   constructor(private actions$:Actions, private nameService : NameService) { }
 
   @Effect() names$:Observable<Action> = this.actions$.ofType(LOAD_USER_NAMES_ACTION)
-                      .switchMap( () => this.nameService.getNames())
-                      .map(q=> new UserNamesLoadedAction(q));
-                      
+          .switchMap( (q) => {  return this.nameService.getNames(q.payload)})
+          .map(q=> new UserNamesLoadedAction(q));                      
 }
