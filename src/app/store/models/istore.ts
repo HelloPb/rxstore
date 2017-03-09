@@ -5,14 +5,22 @@ export interface IPersons {
     cities : {[key:number]:ICity};
 } 
 
-export const PERSONS : IPersons = {
-    names : undefined,
-    cities: undefined
-}
-
 export interface IHeader {    
     name:string;
     description : string;
+}
+
+export interface IStoreApp {
+    personDetails : IPersons;
+    header : IHeader;
+    personDetailsCount: number;
+    headerCount: number;
+}
+
+export const PERSONS : IPersons = {
+    names : undefined,
+    cities: undefined 
+    
 }
 
 export const HEADER : IHeader = {
@@ -20,14 +28,9 @@ export const HEADER : IHeader = {
     description : 'Welcome.  This is ngrx store demo application.'
 }
 
-
-export interface IStoreApp {
-    personDetails : IPersons;
-    header : IHeader;
-}
-
 export const STOREAPP : IStoreApp = {
     personDetails : PERSONS,
-    header : HEADER
+    header : HEADER,
+    personDetailsCount : 0,
+    headerCount : 0
 }
-

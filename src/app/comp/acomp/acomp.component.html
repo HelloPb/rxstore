@@ -1,3 +1,10 @@
+<h1>A-COMP</h1>
 <p>
-  acomp works!
+    <button class="btn btn-primary" (click) = "loadDescription()">Get Description</button>
+</p>
+<p>head : {{head | async}}</p>
+
+
+<p *ngFor="let v of names$ | async">
+    <span>names: {{v.name}}</span>
 </p>

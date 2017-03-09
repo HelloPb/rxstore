@@ -1,3 +1,4 @@
+import { LoadHeaderAction } from '../../store/action/load-header-action';
 import { ICity, IName } from '../../services/name/inames';
 import { SpawnSyncReturns } from 'child_process';
 import { ReturnStatement } from '@angular/compiler/src/output/output_ast';
@@ -37,5 +38,9 @@ export class BcompComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new LoadUserNamesAction(2));
+  }
+  
+  loadDescription(){
+    this.store.dispatch(new LoadHeaderAction(1));
   }
 }

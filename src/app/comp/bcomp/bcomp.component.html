@@ -1,5 +1,9 @@
+
+<h1>B-COMP</h1>
+
 <div> 
   <p *ngFor="let v of names$ | async">
     <span>names: {{v.name}}</span>
   </p>
+  <button class="btn btn-primary" (click) = "loadDescription()">Get Description</button>
 </div>
