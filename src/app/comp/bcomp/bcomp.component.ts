@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { DemoAddress, DemoModel } from '../../store/models/common';
+=======
+import { LoadHeaderAction } from '../../store/action/load-header-action';
+>>>>>>> 565a48d1c9858ee19f1cecd42940698fe76c4695
 import { ICity, IName } from '../../services/name/inames';
 import { SpawnSyncReturns } from 'child_process';
 import { ReturnStatement } from '@angular/compiler/src/output/output_ast';
@@ -48,5 +52,13 @@ export class BcompComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new LoadUserNamesAction(2));
+<<<<<<< HEAD
   } 
+=======
+  }
+  
+  loadDescription(){
+    this.store.dispatch(new LoadHeaderAction(1));
+  }
+>>>>>>> 565a48d1c9858ee19f1cecd42940698fe76c4695
 }
