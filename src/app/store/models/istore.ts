@@ -20,7 +20,6 @@ export const HEADER : IHeader = {
     description : 'Welcome.  This is ngrx store demo application.'
 }
 
-
 export interface IStoreApp {
     personDetails : IPersons;
     header : IHeader;

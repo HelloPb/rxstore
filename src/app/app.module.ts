@@ -6,7 +6,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { LoadUserNameEffectService } from './store/effects/load-user-name-effect.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'; 
 import { AppComponent } from './app.component';
 import { AcompComponent } from './comp/acomp/acomp.component';
@@ -37,6 +37,7 @@ function mapNamesFromList(persons : IPersons, action : UserNamesLoadedAction): I
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     StoreModule.provideStore(reducerStore),
     EffectsModule.run(LoadUserNameEffectService)
   ],
